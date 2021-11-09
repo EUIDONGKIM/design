@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            list 스타일링
+            (1) list에는 항목을 표시하는 기호가 있는데 이를 제거한다(list-style)
+            (2) ul, li에는 기본 여백이 존재하는데 이를 제거한다(padding, margin).
+            (3) .slide-menu에 배치된 1차 메뉴(li)는 flex 형태로 배치한다.
+            (4) .slide-menu에 배치된 1차 메뉴(li)에 간격(폭)을 설정한다.
+            (5) .slide-menu에 배치된 숨겨진 메뉴(ul)는 position을 absolute로 설정한다.
+            (6) 모든 메뉴항목(a)의 배치와 디자인을 변경하고 여백을 설정
+            (7) 색상이나 hover 설정등을 구현
+            (8) 2차 항목부터는 우측에 표시되도록 설정
+        */
+        
+        .slide-menu{
+            display: flex;
+            background-color: yellowgreen;
+        }
+
+
+        .slide-menu li{
+            list-style: none;
+            width: 150px;
+            font-size: 25px;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        .slide-menu li > a{
+            color: black;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .slide-menu li > a:hover{
+            color: red;
+            background-color: blanchedalmond;
+        }
+
+        .slide-menu,
+        .slide-menu li,
+        .slide-menu ul{
+            padding: 0;
+            margin: 0;
+        }
+
+        .slide-menu ul{
+            display: none;
+        }
+        .slide-menu li:hover>ul{
+            
+            display: block;
+        }
+        .slide-menu>li>ul ul{
+            top: 0;
+            left: 150px;
+        }
+        .slide-menu li{
+            position: relative;
+        }
+        .slide-menu ul{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 메뉴는 계층형 구조를 가지므로 list 태그로 구현하기에 적합하다 -->
+    <ul class="slide-menu">
+        <li>
+            <a href="#">메뉴1</a>
+            <ul>
+                <li>
+                    <a href="#">항목1</a>
+                    <ul>
+                        <li>
+                            <a href="#">서브항목1</a>
+                            <ul>
+                                <li><a href="#">서서브항목1</a></li>
+                                <li><a href="#">서서브항목2</a></li>
+                                <li><a href="#">서서브항목3</a></li>
+                                <li><a href="#">서서브항목4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">서브항목2</a></li>
+                        <li><a href="#">서브항목3</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">항목2</a>
+                    <ul>
+                        <li><a href="#">서브항목1</a></li>
+                        <li><a href="#">서브항목2</a></li>
+                        <li><a href="#">서브항목3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">항목3</a></li>
+                <li><a href="#">항목4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴2</a>
+            <ul>
+                <li><a href="#">항목1</a></li>
+                <li><a href="#">항목2</a></li>
+                <li><a href="#">항목3</a></li>
+                <li><a href="#">항목4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴3</a>
+            <ul>
+                <li><a href="#">항목1</a></li>
+                <li><a href="#">항목2</a></li>
+                <li><a href="#">항목3</a></li>
+                <li><a href="#">항목4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">메뉴4</a>
+            <ul>
+                <li><a href="#">항목1</a></li>
+                <li><a href="#">항목2</a></li>
+                <li><a href="#">항목3</a></li>
+                <li><a href="#">항목4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

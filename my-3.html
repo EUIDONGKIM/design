@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+    <style>
+     .image{    
+         border: 2px solid transparent;
+    }
+    .image.image-round{
+        border-radius: 50%;
+    }
+    .image.image-border,
+    .image.image-hover:hover{
+        border: 2px solid black;
+    }
+    .image.image-blur{
+        opacity: 0.2;
+    }
+    .image.image-shadow{
+        box-shadow: 5px 5px 10px 10px black;
+    }
+    .image.image-leaf{
+        
+        border-top-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+    }
+    </style>
+</head>
+<body>
+    <img src="https://via.placeholder.com/200x200" class="image">
+    <img src="https://via.placeholder.com/200x200" class="image image-round">
+    <img src="https://via.placeholder.com/200x200" class="image image-border">
+    <img src="https://via.placeholder.com/200x200" class="image image-hover">
+    <img src="https://via.placeholder.com/200x200" class="image image-blur">
+    <img src="https://via.placeholder.com/200x200" class="image image-shadow">
+    <img src="https://via.placeholder.com/200x200" class="image image-leaf">
+</body>
+</html>

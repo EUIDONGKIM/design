@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다단 레이아웃</title>
+<link rel="stylesheet" type="text/css" href="commons.css">
+<style>
+    .layer{
+        height: 200px;
+        width: 50%;
+        float: left; 
+        /* 인라으로하면 폭지정이 안되니까 인라인블럭으로 
+        
+            inline은 기본적으로 요소 간에 간격이 존재한다.
+            =inline 형태로는 절대 2,3단 레이아웃을 구현할 수 없다.
+        
+            해결책
+            1. float속성을 사용하여 태그 배치 형태를 변경
+                - 구현이 까다롭고, 신경써야 하는 부분이 있다.
+                - 거의 모든 브라우저에서 지원한다.
+            2. display를 flex 형태로 변경하는 방법
+                -canIuse로 확인가능
+                -최신 기술이며, 사용 방법이 편리하다.
+                -지원하지 않는 브라우저가 존재한다(특히 IE)
+        */
+    }
+</style>
+</head>
+<body>
+    <div class="layer"></div>
+    <div class="layer"></div>
+</body>
+</html>

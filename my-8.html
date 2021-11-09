@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="commons.css">
+    <style>
+
+    body{
+        width: 10000px;
+        height: 10000px;
+    }
+      .screen-cover{
+            background-color: rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+      }
+
+      .screen-cover > .screen-conver-content {
+            width:250px;
+            height:120px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%,-50%);
+      }
+
+      .screen-cover > .screen-conver-content > image {
+  
+      }
+    </style>
+</head>
+<body>
+    <a href="https://www.google.com">구글</a>
+    <a href="https://www.naver.com">네이버</a>
+
+    <div class="screen-cover">
+        <div class="screen-conver-content">
+            <img src="https://via.placeholder.com/100">
+        </div>
+    </div>
+</body>
+</html>

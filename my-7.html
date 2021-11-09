@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            flex layout
+            = display:flex; 를 통해 영역 내부의 요소를 float처럼 처리할 수 있다.
+            = clear 처리가 필요하지 않다.
+            = 높이를 자동으로 맞춰준다.
+            = 비율 설정을 지원(flex-grow)
+            = 배치 순서 변경을 지원(flex-direction)
+        */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+        }
+        .menu-wrapper > a {
+            width:300px;
+            text-align: center;
+            padding:1rem;
+            text-decoration: none;
+            color:black;
+            font-size: 30px;
+        }
+        .menu-wrapper > a:hover {
+            color:red;
+        }
+
+        @media screen and (max-width:600px){
+            .menu-wrapper {
+                flex-direction: column;
+            }
+            .menu-wrapper > a {
+                text-align: left;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="flex-container menu-wrapper">
+        <a href="#">홈으로</a>
+        <a href="#">게시판</a>
+        <a href="#">회원가입</a>
+        <a href="#">로그인</a>
+    </div>
+</body>
+</html>

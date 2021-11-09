@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+    <style>
+    .float-container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .float-item-left{
+            float: left;
+        }
+        .float-item-right{
+            float: right;
+        }
+
+        .list-card{
+
+        }
+
+        .list-card > .list-card-image{
+            width: 50%;
+            padding: 1rem;
+        }
+
+        .list-card > .list-card-image > image{
+           width: 100%;
+        }
+
+        .list-card > .list-card-content{
+            width: 50%;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-400 container-center">
+        <div class="row">
+            <div class="float-container list-card">
+                <div class="float-item-left list-card-image">
+                    <img src="https://via.placeholder.com/150x150">
+                </div>
+                <div class="float-item-left list-card-content">
+                    <h1>글</h1>
+                    <p>내용</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+    <style>
+        .float-container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .float-item-left{
+            float: left;
+        }
+        .float-item-right{
+            float: right;
+        }
+        .menu-wrapper{
+            border: 1px solid black;
+            background-color: gainsboro;
+        }
+        .menu-wrapper>a{
+            font-size: 25px;
+            text-decoration: none;
+            color: black;
+            padding: 0.5rem;
+            width: 150px;
+            text-align: center;
+
+        }
+        .menu-wrapper>a:hover{
+            color: red;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="float-container menu-wrapper">
+        <a href="#" class="float-item-left">홈으로</a>
+        <a href="#" class="float-item-right">로그인</a>
+        <a href="#" class="float-item-right">회원가입</a>
+        <a href="#" class="float-item-left">게시판</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+    <style>
+        .float-container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .layer{
+            width: 50%;
+            height: 100px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>
+            상단
+        </h1>
+    </div>
+
+    <div class="float-container">
+        <div class="layer">
+            <a>첫번째</a>
+            <a>두번째</a>
+        </div>
+        <div class="layer">
+            <a>세번째</a>
+        </div>
+    </div>
+
+    <div style="color: red;background-color: salmon;">
+        <h2>하단</h2>
+    </div>
+</body>
+</html>
